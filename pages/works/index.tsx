@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Works() {
   return (
-    <section className=" w-[85%]  h-[1250px] md:h-[500px] flex flex-col justify-between text-white lg:my-0 my-36 ">
+    <section className=" w-[85%]  h-[1250px] md:h-[450px] flex flex-col justify-between text-white lg:my-0 my-36 ">
       <div className="w-full min-h-[45%] h-auto flex flex-col md:flex-row p-2 bg-[#7c7c7c]">
         <div className="lg:w-1/2 w-full min-w-[240px]">
           <Image
