@@ -28,16 +28,7 @@ export default function Navbar() {
             Technologies
           </Link>
         </li>
-        <li className={selected == "skills" ? "text-white" : ""}>
-          <Link
-            href={"/skills"}
-            onClick={() => {
-              setSelected("skills");
-            }}
-          >
-            Skills
-          </Link>
-        </li>
+        
         <li className={selected == "works" ? "text-white" : ""}>
           <Link
             href={"/works"}
