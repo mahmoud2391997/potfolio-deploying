@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Works() {
   return (
-    <section className=" w-[85%]  h-[1250px] md:h-[600px] lg:h-[530px] flex flex-col justify-between text-white lg:my-0 my-36 ">
-      <div className="w-full min-h-[45%] h-auto flex flex-col md:flex-row p-2 bg-[#7c7c7c]">
+    <section className=" w-[85%]  h-[1250px] md:h-[600px] lg:h-[550px] flex flex-col justify-evenly text-white lg:my-0 my-36 ">
+      <div className="w-full  h-auto flex flex-col md:flex-row p-2 bg-[#7c7c7c]">
         <div className="lg:w-1/2 w-full min-w-[240px]">
           <Image
             src="/user.jpg"
@@ -38,7 +38,7 @@ export default function Works() {
           </p>
         </div>
       </div>
-      <div className="w-full  min-h-[45%] h-auto  flex flex-col md:flex-row p-2 bg-[#7c7c7c]">
+      <div className="w-full   h-auto  flex flex-col md:flex-row p-2 bg-[#7c7c7c]">
         <div className="lg:w-4/6 w-full min-w-[240px]">
           <Image
             src="/adminimg.png"
