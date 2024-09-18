@@ -19,7 +19,7 @@ export default function Home() {
           className="rounded-full"
         />{" "}
       </div>
-      <div className="flex justify-between h-auto  flex-col items-start w-auto md:w-[70%] text-center md:text-start">
+      <div className="flex justify-between h-auto mb-12 flex-col items-start w-auto md:w-[70%] text-center md:text-start">
         <h1 className="font-bold text-5xl text-white">
           Mahmoud Mohamed Elsayed
         </h1>
