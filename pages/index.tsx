@@ -1,7 +1,13 @@
 import Image from "next/image";
 
-
 export default function Home() {
+  const handleDownload = () => {
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "/cv.pdf";
+    downloadLink.download = "cv.pdf";
+    downloadLink.click();
+  };
+
   return (
     <section className="w-[70%] md:w-[90%] lg:w-[70%] md:h-[60%] h-fit flex-col md:static md:my-16 my-20 items-center md:items-stretch flex md:flex-row-reverse lg:my-0">
       <div className="my-auto ">
@@ -18,21 +24,20 @@ export default function Home() {
           Mahmoud Mohamed Elsayed
         </h1>
         <p className="text-lg text-[#7c7c7c]">
-          I&apos;m MERN Stack Developer With a passion for developing and designing
-          programs to assist engineers in designing, constructing, and analyzing
-          systems, as well as maintaining systems, I have acquired extensive
-          work skills in technical engineering. I am conscientious, hardworking,
-          detail- oriented, quick to learn new skills, and eager to contribute.
-          I bring a wealth of ideas, enthusiasm, and strong problem-solving
-          abilities to the table.
+          I&apos;m MERN Stack Developer With a passion for developing and
+          designing programs to assist engineers in designing, constructing, and
+          analyzing systems, as well as maintaining systems, I have acquired
+          extensive work skills in technical engineering. I am conscientious,
+          hardworking, detail- oriented, quick to learn new skills, and eager to
+          contribute. I bring a wealth of ideas, enthusiasm, and strong
+          problem-solving abilities to the table.
         </p>
         <button
           type="button"
           className="bg-white text-xl md:m-0 m-auto font-medium w-52 h-auto"
+          onClick={handleDownload}
         >
-          <a href="/cv.pdf" download="/cv.pdf">
-            Download CV
-          </a>
+          Download CV
         </button>
       </div>
     </section>
