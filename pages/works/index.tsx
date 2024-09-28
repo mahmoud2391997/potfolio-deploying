@@ -50,7 +50,7 @@ export default function Works() {
         </div>
         <div className="px-4 flex flex-col justify-between">
           <div className="text-2xl font-bold">
-            Travelling and Boooking Website
+            Travelling and Booking Website
           </div>
           <div className="flex">
             <div className="text one">Website Link:</div>
