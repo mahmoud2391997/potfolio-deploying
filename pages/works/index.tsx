@@ -39,9 +39,9 @@ export default function Works() {
         </div>
       </div>
       <div className="w-full   h-auto  flex flex-col md:flex-row p-2 bg-[#7c7c7c]">
-        <div className="lg:w-4/6 w-full min-w-[240px]">
+        <div className="lg:w-3/6 w-full min-w-[240px]">
           <Image
-            src="/adminimg.png"
+            src="/travelling.png"
             alt="My Image"
             width={500}
             height={500}
@@ -49,24 +49,24 @@ export default function Works() {
           />
         </div>
         <div className="px-4 flex flex-col justify-between">
-          <div className="text-2xl font-bold">Artix (Admin Website)</div>
+          <div className="text-2xl font-bold">
+            Travelling and Boooking Website
+          </div>
           <div className="flex">
             <div className="text one">Website Link:</div>
             <Link className="ml-1" href={"https://art-admin-one.vercel.app/"}>
               <p className="text-blue-600 hover:underline cursor-pointer">
-                https://art-admin-one.vercel.app/
+                https://travelling-murex.vercel.app/{" "}
               </p>
             </Link>
           </div>
-          <p className="text-lgs">Using: Reactjs - Redux - Node.js - MongoDB</p>
+          <p className="text-lgs">Using: Next.TS </p>
           <p>
-            {" "}
-            As for the product owner, we have created a website with the owner’s
-            authority to add products, receive orders, display each order
-            details and be aware of the sales percentage. As for the product
-            owner, we have created a website with the owner’s authority to add
-            products, receive orders, display each order details and be aware of
-            the sales percentage.
+            A traveling web app is an online platform accessible through a web
+            browser that offers a wide range of features and services to help
+            users plan, organize, and enhance their travel experiences,Users can
+            create and manage their travel itineraries, including adding
+            destinations
           </p>
         </div>
       </div>
