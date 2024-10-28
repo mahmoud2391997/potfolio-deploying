@@ -30,11 +30,11 @@ export default function Works() {
     },
   ];
   return (
-    <section className=" w-[85%]  h-auto p-14 flex flex-col justify-evenly text-white lg:my-0 my-36 ">
+    <section className=" w-[85%] min-w-[260px] h-auto md:p-14 flex flex-col justify-evenly text-white lg:my-0 my-36 ">
       {works.map((work, index) => (
         <div
           key={index}
-          className="w-full my-5  h-auto flex flex-col md:flex-row p-2 bg-[#7c7c7c]"
+          className="min-w-[250px] my-5 w-full h-auto flex flex-col md:flex-row p-2 bg-[#7c7c7c]"
         >
           <div className="lg:w-1/2 w-full min-w-[240px]">
             <Image
