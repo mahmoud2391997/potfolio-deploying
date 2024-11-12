@@ -28,9 +28,17 @@ export default function Works() {
       description:
         "The Task Management App is a robust and intuitive platform designed for users to efficiently manage their tasks. Built with React, Redux Toolkit, and React Hook Form, the application provides a seamless experience for creating, editing, deleting, and viewing tasks, along with customizable inputs and validations",
     },
+    {
+      image: "/tv.png",
+      title: "TV Web App",
+      using: "Next.js - Node.js - MongoDB - Express.js",
+      link: "https://tv-deploying.vercel.app/",
+      description:
+        "The TV App is a comprehensive platform designed for users to explore, organize, and track their favorite shows and movies. Built with Next.js, the app offers a seamless experience with dynamic browsing through categories, genres, and personalized watchlists. Users can view detailed information on each title, including release date, cast, and storyline, while rating and saving shows for future viewing. The app's intuitive structure allows for easy navigation and smooth performance, providing users with an engaging and personalized streaming guide.",
+    },
   ];
   return (
-    <section className=" w-[85%] min-w-[260px] h-auto md:p-14 flex flex-col justify-evenly text-white lg:my-0 my-36 ">
+    <section className=" w-[85%] min-w-[260px] h-auto md:p-14 flex flex-col justify-evenly text-white lg:my-10 my-36 ">
       {works.map((work, index) => (
         <div
           key={index}
@@ -55,7 +63,7 @@ export default function Works() {
                 </p>
               </Link>
             </div>
-            <p className="text-lgs">Using:{work.using}</p>
+            <p className="text-lgs">Using: {work.using}</p>
 
             <p>{work.description}</p>
           </div>
