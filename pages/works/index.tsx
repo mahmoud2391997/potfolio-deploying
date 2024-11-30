@@ -35,7 +35,14 @@ export default function Works() {
       link: "https://tv-deploying.vercel.app/",
       description:
         "The TV App is a comprehensive platform designed for users to explore, organize, and track their favorite shows and movies. Built with Next.js, the app offers a seamless experience with dynamic browsing through categories, genres, and personalized watchlists. Users can view detailed information on each title, including release date, cast, and storyline, while rating and saving shows for future viewing. The app's intuitive structure allows for easy navigation and smooth performance, providing users with an engaging and personalized streaming guide.",
-    },
+    },   {
+      image: "/3d.png",
+      title: "3D Building Visualization On Map",
+      using: "React.js - OpenStreetMap - Leaflet.js - Three.js",
+      link: "https://3d-building-map-rho.vercel.app/",
+      description:
+        "This project is an interactive web application combining a 2D Leaflet map with a 3D building visualization using Three.js. It dynamically positions a 3D building model on the map, updating in real-time as users pan or zoom, offering a seamless exploration experience. Key features include marker clustering, customizable 3D floors, and smooth map-3D integration.",
+    }
   ];
   return (
     <section className=" w-[85%] min-w-[260px] h-auto md:p-14 flex flex-col justify-evenly text-white lg:my-10 my-36 ">
