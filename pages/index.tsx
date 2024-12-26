@@ -16,7 +16,7 @@ export default function Home() {
           alt="My Image"
           width={450}
           height={450}
-          className="rounded-full"
+          className="rounded-2xl"
         />{" "}
       </div>
       <div className="flex justify-between h-auto mb-12 flex-col items-start w-auto md:w-[70%] text-center md:text-start">

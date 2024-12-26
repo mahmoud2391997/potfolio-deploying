@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Orbitron } from 'next/font/google'; // Add this line
+
+const orbitron = Orbitron({ subsets: ['latin'] }); // Add this line
 
 export default function Works() {
   const works = [
@@ -46,7 +49,7 @@ export default function Works() {
     },
   ];
   return (
-    <section className=" w-[85%] min-w-[260px] h-auto md:p-14 flex flex-wrap justify-evenly text-white lg:my-10 my-36 ">
+    <section className={`w-[85%] min-w-[260px] h-auto md:p-14 flex flex-wrap justify-evenly text-white lg:my-10 my-36 ${orbitron.className}`}> {/* Add orbitron class */}
       {works.map((work, index) => (
         <div
           key={index}
@@ -56,7 +59,7 @@ export default function Works() {
             <img
               src={work.image}
               alt="card-image"
-              className="border border-black "
+              className="border border-black rounded-md"
             />
           </div>
           <div className="p-4">
