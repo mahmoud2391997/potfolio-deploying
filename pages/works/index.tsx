@@ -35,44 +35,52 @@ export default function Works() {
       link: "https://tv-deploying.vercel.app/",
       description:
         "The TV App is a comprehensive platform designed for users to explore, organize, and track their favorite shows and movies. Built with Next.js, the app offers a seamless experience with dynamic browsing through categories, genres, and personalized watchlists. Users can view detailed information on each title, including release date, cast, and storyline, while rating and saving shows for future viewing. The app's intuitive structure allows for easy navigation and smooth performance, providing users with an engaging and personalized streaming guide.",
-    },   {
+    },
+    {
       image: "/3d.png",
       title: "3D Building Visualization On Map",
       using: "React.js - OpenStreetMap - Leaflet.js - Three.js",
       link: "https://3d-building-map-rho.vercel.app/",
       description:
         "This project is an interactive web application combining a 2D Leaflet map with a 3D building visualization using Three.js. It dynamically positions a 3D building model on the map, updating in real-time as users pan or zoom, offering a seamless exploration experience. Key features include marker clustering, customizable 3D floors, and smooth map-3D integration.",
-    }
+    },
   ];
   return (
-    <section className=" w-[85%] min-w-[260px] h-auto md:p-14 flex flex-col justify-evenly text-white lg:my-10 my-36 ">
+    <section className=" w-[85%] min-w-[260px] h-auto md:p-14 flex flex-wrap justify-evenly text-white lg:my-10 my-36 ">
       {works.map((work, index) => (
         <div
           key={index}
-          className="min-w-[250px] my-5 w-full h-auto flex flex-col md:flex-row p-2 bg-[#7c7c7c]"
+          className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96"
         >
-          <div className="lg:w-1/2 w-full min-w-[240px]">
-            <Image
+          <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
+            <img
               src={work.image}
-              alt="My Image"
-              width={500}
-              height={500}
-              className="w-full h-full"
+              alt="card-image"
+              className="border border-black "
             />
           </div>
-          <div className="px-4 flex flex-col justify-between">
-            <div className="text-2xl font-bold">{work.title}</div>
-            <div className="flex jus">
-              <div className="text one">Website Link:</div>
-              <Link className="ml-1" href={work.link}>
-                <p className="text-blue-600 hover:underline cursor-pointer">
-                  {work.link}
-                </p>
-              </Link>
-            </div>
-            <p className="text-lgs">Using: {work.using}</p>
+          <div className="p-4">
+            <h6 className="mb-2 text-slate-800 text-xl font-semibold">
+              {work.title}
+            </h6>
+            <p className="text-slate-600 leading-normal font-light">
+              {work.description}
+            </p>
+          </div>
+          <div className="p-4">
+            <h6 className="mb-2 text-slate-800 text-xl font-semibold">
+              Using: {work.using}
+            </h6>
+          </div>
 
-            <p>{work.description}</p>
+          <div className="px-4 pb-4 pt-0 mt-2">
+            <button
+              className="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              type="button"
+              onClick={() => window.open(work.link, "_blank")}
+              >
+              View Project
+            </button>
           </div>
         </div>
       ))}
