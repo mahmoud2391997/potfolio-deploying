@@ -15,12 +15,21 @@ export default function Works() {
         "Website displays handicrafts and art pieces in our application. Our application helps clients to find the best products. Also, it provides events for displaying products and artistic talents, where clients can book a ticket. Moreover, we send the ticket to mail provided by our client.",
     },
     {
+      image: "/travelling.png",
+      title: "Travelling and Booking Website",
+      using: "Next.TS - Node.js - MongoDB - Stripe Payment",
+      link: "https://travelling-murex.vercel.app/",
+      description:
+        " A traveling web app is an online platform accessible through a web browser that offers a wide range of features and services to help users plan, organize, and enhance their travel experiences,Users can create and manage their travel itineraries, including adding destinations",
+    },
+    {
       image: "/trio.png",
       title: "Personal Trainer Fitness Website",
       using: "Next.TS - Node.js - MongoDB - Firebase",
       link: "https://triofitnessindustry.vercel.app/",
       description:"A personal training web app is an online platform accessible via a web browser, designed to help users achieve their fitness goals. It offers a variety of features, including personalized workout and nutrition plans created by professional trainers. Users can subscribe to tailored fitness packages, track their progress, and access expert guidance, making it a convenient and effective solution for staying fit and healthy."
     },
+    
     {
       image: "/Tasks.png",
       title: "Task Management Web App",
