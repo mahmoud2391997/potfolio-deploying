@@ -7,6 +7,14 @@ const orbitron = Orbitron({ subsets: ['latin'] }); // Add this line
 export default function Works() {
   const works = [
     {
+      image: "/dashboard.png",
+      title: "Groom hair and beauty salon : Admin Panel",
+      using: "React.js - Redux - Node.js - firebase",
+      link: "https://admin-panel-preview.vercel.app/dashboard",
+      description:
+        "The Admin Panel for Groom Hair and Beauty Salon is a web application designed to manage and oversee the operations of the salons. It provides a user-friendly interface for administrators to handle appointments, customer data, and service offerings. The panel allows for efficient scheduling, tracking of services rendered, and management of staff assignments. With features like analytics and reporting, the admin can monitor performance metrics and make informed decisions to enhance the salons' and customers operations.",
+    },
+    {
       image: "/user.jpg",
       title: "Artix (User Website)",
       using: "Reactjs - Redux - Node.js - MongoDB - Stripe Payment",
@@ -23,13 +31,28 @@ export default function Works() {
         " A traveling web app is an online platform accessible through a web browser that offers a wide range of features and services to help users plan, organize, and enhance their travel experiences,Users can create and manage their travel itineraries, including adding destinations",
     },
     {
+      image: "/almostafa.png",
+      title: "Al-Mustafa Online Dairy Products Store",
+      using: "Next.TS - Node.js - MongoDB",
+      link: "https://almostafa-ecommerce.vercel.app/",
+      description:
+        " Al-Mustafa Online Dairy Products Store is an E-commerce web app facilitating the sale of dairy products. It offers a user-friendly interface for browsing and purchasing items, with features like product categories, detailed descriptions, and secure payment options. The app ensures a seamless shopping experience, allowing customers and markets to easily find and order their favorite dairy products online.",
+    },
+    {
       image: "/trio.png",
       title: "Personal Trainer Fitness Website",
       using: "Next.TS - Node.js - MongoDB - Firebase",
       link: "https://triofitnessindustry.vercel.app/",
       description:"A personal training web app is an online platform accessible via a web browser, designed to help users achieve their fitness goals. It offers a variety of features, including personalized workout and nutrition plans created by professional trainers. Users can subscribe to tailored fitness packages, track their progress, and access expert guidance, making it a convenient and effective solution for staying fit and healthy."
     },
-    
+    {
+      image: "/seven.png",
+      title: "Seven Fashion E-commerce Website",
+      using: "Next.js - Node.js - MongoDB - Express.js",
+      link: "https://seven-fashion.vercel.app/",
+      description:
+        "Seven Fashion is an E-commerce web app that specializes in Women fashion products. It offers a user-friendly interface for browsing and purchasing clothing. The app features product categories, detailed descriptions, and secure payment options, ensuring a seamless shopping experience for customers. With a focus on fashion trends and styles, Seven Fashion provides a convenient platform for users to explore and shop for their favorite fashion items online.",
+    },
     {
       image: "/Tasks.png",
       title: "Task Management Web App",
