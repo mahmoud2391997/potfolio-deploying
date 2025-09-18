@@ -245,7 +245,7 @@ export default function Contact() {
                           value={formData.name}
                           onChange={handleInputChange}
                           className="bg-slate-700/50 border-purple-500/20 text-white placeholder-gray-400 focus:border-purple-400"
-                          placeholder="Your name"
+                          placeholder="Mahmoud Elsayed"
                         />
                       </div>
                       <div>

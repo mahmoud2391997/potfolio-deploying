@@ -4,9 +4,13 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import { Orbitron } from 'next/font/google'
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import SEOHead from "../../components/SEOHead"
+import { Description } from "@radix-ui/react-toast"
+
+const orbitron = Orbitron({ subsets: ['latin'] })
 
 export default function Works() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -41,23 +45,48 @@ export default function Works() {
 
   const projects = [
     {
-      title: "Artix (User Website)",
-      description:
-        "Website displays handicrafts and art pieces in our application. Our application helps clients to find the best products. Also, it provides events for displaying products and artistic talents, where clients can book a ticket. Moreover, we send the ticket to mail provided by our client.",
-      technologies: ["React.js", "Redux", "Node.js", "MongoDB"],
-      link: "https://art-handmade-ecommerce.vercel.app/",
-      image: "/user.jpg",
-      gradient: "from-blue-500 to-cyan-500",
+      title: "Masters Clinics Website",
+      description: "The Masters Clinics Website is a comprehensive platform designed for a network of clinics. It offers features such as appointment scheduling, patient management, and telemedicine capabilities. Built with Next.js and Node.js, the website ensures a seamless user experience for both patients and healthcare providers.",
+      technologies: ["Next.js", "Node.js", "mySQL", "Tailwind CSS"],
+      link: "https://mastersclinics-website-next.vercel.app/",
+      image: "/masters.png",
+      gradient: "from-green-400 to-blue-500",
     },
     {
-      title: "Artix (Admin Website)",
-      description:
-        "As for the product owner, we have created a website with the owner's authority to add products, receive orders, display each order details and be aware of the sales percentage. Complete admin dashboard with full CRUD operations and analytics.",
-      technologies: ["React.js", "Redux", "Node.js", "MongoDB"],
-      link: "https://art-admin-one.vercel.app/",
-      image: "/adminimg.png",
-      gradient: "from-purple-500 to-pink-500",
+      title: "Groom hair and beauty salon : Admin Panel",
+      description: "The Admin Panel for Groom Hair and Beauty Salon is a web application designed to manage and oversee the operations of the salons. It provides a user-friendly interface for administrators to handle appointments, customer data, and service offerings. The panel allows for efficient scheduling, tracking of services rendered, and management of staff assignments. With features like analytics and reporting, the admin can monitor performance metrics and make informed decisions to enhance the salons' and customers operations.",
+      technologies: ["React.js", "Redux", "Node.js", "Firebase"],
+      link: "https://admin-panel-preview.vercel.app/dashboard",
+      image: "/ads.png",
+      gradient: "from-blue-500 to-cyan-500",
     },
+
+    
+    {
+      title: "Al-Mustafa Online Dairy Products Store",
+      description: "Al-Mustafa Online Dairy Products Store is an E-commerce web app facilitating the sale of dairy products. It offers a user-friendly interface for browsing and purchasing items, with features like product categories, detailed descriptions, and secure payment options. The app ensures a seamless shopping experience, allowing customers and markets to easily find and order their favorite dairy products online.",
+      technologies: ["Next.TS", "Node.js", "MongoDB"],
+      link: "https://almostafa-ecommerce.vercel.app/",
+      image: "/almustafa.png",
+      gradient: "from-orange-500 to-red-500",
+    },
+    {
+      title: "Personal Trainer Fitness Website",
+      description: "A personal training web app is an online platform accessible via a web browser, designed to help users achieve their fitness goals. It offers a variety of features, including personalized workout and nutrition plans created by professional trainers. Users can subscribe to tailored fitness packages, track their progress, and access expert guidance, making it a convenient and effective solution for staying fit and healthy.",
+      technologies: ["Next.TS", "Node.js", "MongoDB", "Firebase"],
+      link: "https://triofitnessindustry.vercel.app/",
+      image: "/trio.png",
+      gradient: "from-yellow-500 to-orange-500",
+    },
+    {
+      title: "Seven Fashion E-commerce Website",
+      description: "Seven Fashion is an E-commerce web app that specializes in Women fashion products. It offers a user-friendly interface for browsing and purchasing clothing. The app features product categories, detailed descriptions, and secure payment options, ensuring a seamless shopping experience for customers. With a focus on fashion trends and styles, Seven Fashion provides a convenient platform for users to explore and shop for their favorite fashion items online.",
+      technologies: ["Next.js", "Node.js", "MongoDB", "Express.js"],
+      link: "https://seven-fashion.vercel.app/",
+      image: "/seven.png",
+      gradient: "from-pink-500 to-rose-500",
+    },
+    
   ]
 
   return (
@@ -70,9 +99,9 @@ export default function Works() {
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <Navbar />
 
-        <main className="container mx-auto px-4 py-8 pt-24">
+        <main className={`container mx-auto px-4 py-8 pt-24 ${orbitron.className}`}>
           <motion.div className="max-w-6xl mx-auto" variants={containerVariants} initial="hidden" animate="visible">
             <div className="text-center mb-16">
               <motion.h1

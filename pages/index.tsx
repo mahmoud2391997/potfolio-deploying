@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="Your Name - Full Stack Developer & UI/UX Designer"
+        title="Mahmoud Elsayed - Full Stack Developer & UI/UX Designer"
         description="Welcome to my portfolio. I'm a passionate Full Stack Developer with expertise in React, Next.js, Node.js, and modern web technologies. Explore my projects and get in touch!"
         keywords="full stack developer, react developer, next.js, portfolio, web development, UI/UX design, javascript, typescript"
         url="/"
@@ -28,6 +28,18 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="text-center"
               >
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="mb-8"
+                >
+                  <img
+                    src="/portfolio.jpg"
+                    alt="Mahmoud Mohamed Elsayed - Full Stack Developer"
+                    className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto border-4 border-gradient-to-r from-blue-400 to-purple-600 shadow-2xl"
+                  />
+                </motion.div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance">
                   Full Stack
                   <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
@@ -54,6 +66,18 @@ export default function Home() {
                     className="px-8 py-3 border border-gray-600 text-white rounded-lg font-semibold hover:bg-gray-800 transition-all"
                   >
                     Get In Touch
+                  </motion.a>
+                  <motion.a
+                    href="/cv.pdf"
+                    download="Mahmoud_Elsayed_CV.pdf"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all flex items-center gap-2"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Download CV
                   </motion.a>
                 </div>
               </motion.div>

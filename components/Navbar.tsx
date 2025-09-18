@@ -1,11 +1,23 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
+import { useRouter } from "next/router"
 import { motion } from "framer-motion"
 
 export default function Navbar() {
-  const [selected, setSelected] = useState("home")
+  const router = useRouter()
+  
+  const getActiveTab = () => {
+    const path = router.pathname
+    if (path === '/') return 'home'
+    if (path.startsWith('/technologies')) return 'technologies'
+    if (path.startsWith('/skills')) return 'skills'
+    if (path.startsWith('/works')) return 'works'
+    if (path.startsWith('/contact')) return 'contact'
+    return 'home'
+  }
+  
+  const selected = getActiveTab()
 
   const navVariants = {
     hidden: { y: -100, opacity: 0 },
@@ -46,9 +58,6 @@ export default function Navbar() {
         <motion.li className={selected == "home" ? "text-white" : ""} variants={linkVariants} whileHover="hover">
           <Link
             href={"/"}
-            onClick={() => {
-              setSelected("home")
-            }}
             className="relative"
           >
             Home
@@ -68,9 +77,6 @@ export default function Navbar() {
         >
           <Link
             href={"/technologies"}
-            onClick={() => {
-              setSelected("technologies")
-            }}
             className="relative"
           >
             Technologies
@@ -86,9 +92,6 @@ export default function Navbar() {
         <motion.li className={selected == "skills" ? "text-white" : ""} variants={linkVariants} whileHover="hover">
           <Link
             href={"/skills"}
-            onClick={() => {
-              setSelected("skills")
-            }}
             className="relative"
           >
             Skills
@@ -104,9 +107,6 @@ export default function Navbar() {
         <motion.li className={selected == "works" ? "text-white" : ""} variants={linkVariants} whileHover="hover">
           <Link
             href={"/works"}
-            onClick={() => {
-              setSelected("works")
-            }}
             className="relative"
           >
             Works
@@ -122,9 +122,6 @@ export default function Navbar() {
         <motion.li className={selected == "contact" ? "text-white" : ""} variants={linkVariants} whileHover="hover">
           <Link
             href={"/contact"}
-            onClick={() => {
-              setSelected("contact")
-            }}
             className="relative"
           >
             Contact

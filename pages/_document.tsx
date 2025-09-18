@@ -9,9 +9,9 @@ export default function Document() {
 
         {/* Favicon and App Icons */}
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo.jpg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo.jpg" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo.jpg" />
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Theme Color */}
@@ -25,8 +25,8 @@ export default function Document() {
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         {/* Author and copyright */}
-        <meta name="author" content="Your Name" />
-        <meta name="copyright" content="Your Name" />
+        <meta name="author" content="Mahmoud Elsayed" />
+        <meta name="copyright" content="Mahmoud Elsayed" />
 
         {/* Verification tags (add your actual verification codes) */}
         {/* <meta name="google-site-verification" content="your-google-verification-code" /> */}

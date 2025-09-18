@@ -13,19 +13,19 @@ interface SEOHeadProps {
 }
 
 export default function SEOHead({
-  title = "Your Name - Full Stack Developer & UI/UX Designer",
+  title = "Mahmoud Elsayed - Full Stack Developer & UI/UX Designer",
   description = "Experienced Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies. Creating innovative digital solutions with exceptional user experiences.",
   keywords = "full stack developer, react developer, next.js, node.js, javascript, typescript, web development, UI/UX design, portfolio",
   image = "/og-image.jpg",
-  url = "https://yourportfolio.com",
+  url = "https://mahmoudalsayed.vercel.app",
   type = "website",
-  author = "Your Name",
+  author = "Mahmoud Elsayed",
   publishedTime,
   modifiedTime,
 }: SEOHeadProps) {
-  const fullTitle = title.includes("Your Name") ? title : `${title} | Your Name - Full Stack Developer`
-  const fullUrl = url.startsWith("http") ? url : `https://yourportfolio.com${url}`
-  const fullImage = image.startsWith("http") ? image : `https://yourportfolio.com${image}`
+  const fullTitle = title.includes("Mahmoud Elsayed") ? title : `${title} | Mahmoud Elsayed - Full Stack Developer`
+  const fullUrl = url.startsWith("http") ? url : `https://mahmoudalsayed.vercel.app/${url}`
+  const fullImage = image.startsWith("http") ? image : `https://mahmoudalsayed.vercel.app/${image}`
 
   return (
     <Head>
@@ -44,7 +44,7 @@ export default function SEOHead({
       <meta property="og:image" content={fullImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Your Name Portfolio" />
+      <meta property="og:site_name" content="Mahmoud Elsayed Portfolio" />
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}
@@ -71,13 +71,13 @@ export default function SEOHead({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
-            name: "Your Name",
-            url: "https://yourportfolio.com",
+            name: "Mahmoud Elsayed",
+            url: "https://mahmoudalsayed.vercel.app/",
             image: fullImage,
             sameAs: [
-              "https://linkedin.com/in/yourprofile",
-              "https://github.com/yourusername",
-              "https://twitter.com/yourtwitterhandle",
+              "https://www.linkedin.com/in/mahmoud-elsayed-17293b29b",
+              "https://github.com/mahmoud2391997",
+              "https://twitter.com/mahmoudelsayed",
             ],
             jobTitle: "Full Stack Developer",
             worksFor: {
