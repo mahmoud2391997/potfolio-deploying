@@ -45,6 +45,13 @@ export default function Works() {
 
   const projects = [
     {
+      title: "SAM'S PS gaming center system",
+      description: "SAM's PS Gaming Center System is a comprehensive web application designed to manage and streamline the operations of a gaming center. It offers features such as customer management, inventory tracking, and revenue reporting. The system is built using Next.js and Node.js, ensuring a seamless user experience for both administrators and customers.",
+      technologies: ["React.js","Vite"],
+      link: "https://z14.great-site.net",
+      image: "/sams.png",
+    },
+    {
       title: "Masters Clinics Website",
       description: "The Masters Clinics Website is a comprehensive platform designed for a network of clinics. It offers features such as appointment scheduling, patient management, and telemedicine capabilities. Built with Next.js and Node.js, the website ensures a seamless user experience for both patients and healthcare providers.",
       technologies: ["Next.js", "Node.js", "mySQL", "Tailwind CSS"],
