@@ -2,36 +2,38 @@
 
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 
 export default function Navbar() {
   const router = useRouter()
-  
+
   const getActiveTab = () => {
     const path = router.pathname
-    if (path === '/') return 'home'
-    if (path.startsWith('/technologies')) return 'technologies'
-    if (path.startsWith('/skills')) return 'skills'
-    if (path.startsWith('/works')) return 'works'
-    if (path.startsWith('/contact')) return 'contact'
-    return 'home'
+    if (path === "/") return "home"
+    if (path.startsWith("/technologies")) return "technologies"
+    if (path.startsWith("/skills")) return "skills"
+    if (path.startsWith("/works")) return "works"
+    if (path.startsWith("/contact")) return "contact"
+    if (path.startsWith("/certificates")) return "certificates"
+    return "home"
   }
-  
+
   const selected = getActiveTab()
 
-  const navVariants = {
+  // ✅ Typed as Variants
+  const navVariants: Variants = {
     hidden: { y: -100, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: "easeOut", // works with Variants typing
       },
     },
   }
 
-  const linkVariants = {
+  const linkVariants: Variants = {
     hover: {
       scale: 1.1,
       color: "#ffffff",
@@ -55,11 +57,12 @@ export default function Navbar() {
         transition={{ duration: 0.5 }}
       />
       <ul className="absolute flex sm:justify-between sm:w-[70%] w-[90%] justify-around sm:left-[15%] left-0 top-[23px] text-[#7c7c7c]">
-        <motion.li className={selected == "home" ? "text-white" : ""} variants={linkVariants} whileHover="hover">
-          <Link
-            href={"/"}
-            className="relative"
-          >
+        <motion.li
+          className={selected === "home" ? "text-white" : ""}
+          variants={linkVariants}
+          whileHover="hover"
+        >
+          <Link href="/" className="relative">
             Home
             {selected === "home" && (
               <motion.div
@@ -70,15 +73,13 @@ export default function Navbar() {
             )}
           </Link>
         </motion.li>
+
         <motion.li
-          className={selected == "technologies" ? "text-white" : ""}
+          className={selected === "technologies" ? "text-white" : ""}
           variants={linkVariants}
           whileHover="hover"
         >
-          <Link
-            href={"/technologies"}
-            className="relative"
-          >
+          <Link href="/technologies" className="relative">
             Technologies
             {selected === "technologies" && (
               <motion.div
@@ -89,11 +90,13 @@ export default function Navbar() {
             )}
           </Link>
         </motion.li>
-        <motion.li className={selected == "skills" ? "text-white" : ""} variants={linkVariants} whileHover="hover">
-          <Link
-            href={"/skills"}
-            className="relative"
-          >
+
+        <motion.li
+          className={selected === "skills" ? "text-white" : ""}
+          variants={linkVariants}
+          whileHover="hover"
+        >
+          <Link href="/skills" className="relative">
             Skills
             {selected === "skills" && (
               <motion.div
@@ -104,11 +107,13 @@ export default function Navbar() {
             )}
           </Link>
         </motion.li>
-        <motion.li className={selected == "works" ? "text-white" : ""} variants={linkVariants} whileHover="hover">
-          <Link
-            href={"/works"}
-            className="relative"
-          >
+
+        <motion.li
+          className={selected === "works" ? "text-white" : ""}
+          variants={linkVariants}
+          whileHover="hover"
+        >
+          <Link href="/works" className="relative">
             Works
             {selected === "works" && (
               <motion.div
@@ -119,13 +124,32 @@ export default function Navbar() {
             )}
           </Link>
         </motion.li>
-        <motion.li className={selected == "contact" ? "text-white" : ""} variants={linkVariants} whileHover="hover">
-          <Link
-            href={"/contact"}
-            className="relative"
-          >
+
+        <motion.li
+          className={selected === "contact" ? "text-white" : ""}
+          variants={linkVariants}
+          whileHover="hover"
+        >
+          <Link href="/contact" className="relative">
             Contact
             {selected === "contact" && (
+              <motion.div
+                className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400"
+                layoutId="underline"
+                transition={{ duration: 0.3 }}
+              />
+            )}
+          </Link>
+        </motion.li>
+
+        <motion.li
+          className={selected === "certificates" ? "text-white" : ""}
+          variants={linkVariants}
+          whileHover="hover"
+        >
+          <Link href="/certificates" className="relative">
+            Certificates
+            {selected === "certificates" && (
               <motion.div
                 className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400"
                 layoutId="underline"
