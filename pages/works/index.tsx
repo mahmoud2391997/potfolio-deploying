@@ -45,6 +45,18 @@ export default function Works() {
 
   const projects = [
     {
+      title: "E-learning Platform", 
+      description: "An E-learning platform that offers a variety of courses and resources for students and professionals. The platform includes features such as user authentication, course management, and progress tracking.",
+      technologies: ["Vite",
+        "TypeScript",
+        "React",
+        "shadcn-ui",
+        "Tailwind CSS"],
+      link: "https://arabic-right-flow.lovable.app/",
+      image: "/e-learning.png",
+      gradient: "from-purple-500 to-pink-500",
+    },
+    {
       title: "SAM'S PS gaming center system",
       description: "SAM's PS Gaming Center System is a comprehensive web application designed to manage and streamline the operations of a gaming center. It offers features such as customer management, inventory tracking, and revenue reporting. The system is built using Next.js and Node.js, ensuring a seamless user experience for both administrators and customers.",
       technologies: ["React.js","Vite"],
