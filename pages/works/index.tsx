@@ -9,6 +9,7 @@ import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import SEOHead from "../../components/SEOHead"
 import { Description } from "@radix-ui/react-toast"
+import { title } from "process"
 
 const orbitron = Orbitron({ subsets: ['latin'] })
 
@@ -44,6 +45,18 @@ export default function Works() {
   }
 
   const projects = [
+    {
+      title: "travel agency management platform",
+      description: "A comprehensive travel agency management platform that streamlines operations, enhances customer experience, and boosts business growth. The platform offers features such as booking management, customer relationship management (CRM), itinerary planning, and payment processing. With an intuitive interface and robust backend, it empowers travel agencies to efficiently manage their services and provide exceptional travel experiences to their clients.",
+  technologies: ["Vite",
+        "TypeScript",
+        "React",
+        "shadcn-ui",
+        "Tailwind CSS"],
+              link: "https://toursync-pro.vercel.app/",
+      image: "/travel-agency.png",
+      gradient: "from-blue-500 to-indigo-500",
+    },
     {
       title: "E-learning Platform", 
       description: "An E-learning platform that offers a variety of courses and resources for students and professionals. The platform includes features such as user authentication, course management, and progress tracking.",
