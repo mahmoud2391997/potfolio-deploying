@@ -46,6 +46,15 @@ export default function Works() {
 
   const projects = [
     {
+      title: "property management internal incooperation platform",
+      description: "A platform designed to streamline property management processes, enhance collaboration among internal teams, and improve overall operational efficiency. The platform includes features such as task management, document sharing, and communication tools.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      link: "https://altharwa-alaqaria.vercel.app/",
+      image: "/propertymanagement.png",
+      gradient: "from-pink-500 to-purple-500",
+
+    },
+    {
       title: "travel agency management platform",
       description: "A comprehensive travel agency management platform that streamlines operations, enhances customer experience, and boosts business growth. The platform offers features such as booking management, customer relationship management (CRM), itinerary planning, and payment processing. With an intuitive interface and robust backend, it empowers travel agencies to efficiently manage their services and provide exceptional travel experiences to their clients.",
   technologies: ["Vite",
