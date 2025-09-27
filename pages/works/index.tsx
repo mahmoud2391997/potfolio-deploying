@@ -46,11 +46,11 @@ export default function Works() {
 
   const projects = [
     {
-      title: "property management internal incooperation platform",
+      title: "property management internal incorporation platform",
       description: "A platform designed to streamline property management processes, enhance collaboration among internal teams, and improve overall operational efficiency. The platform includes features such as task management, document sharing, and communication tools.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       link: "https://altharwa-alaqaria.vercel.app/",
-      image: "/propertymanagement.png",
+      image: "/propertymanagment.png",
       gradient: "from-pink-500 to-purple-500",
 
     },
