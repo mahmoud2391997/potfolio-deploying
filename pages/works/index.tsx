@@ -46,6 +46,15 @@ export default function Works() {
 
   const projects = [
     {
+      title: "Market OS - Supermarket Management System",
+      description: "A comprehensive supermarket management system that streamlines operations, enhances customer experience, and boosts business growth. The system offers features such as inventory management, sales tracking, and customer relationship management (CRM). With an intuitive interface and robust backend, it empowers supermarkets to efficiently manage their services and provide exceptional shopping experiences to their clients.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+
+      link: "https://marketos.kesug.com/",
+      image: "/market.png",
+      gradient: "from-green-500 to-blue-500",
+    },
+    {
       title: "property management internal incorporation platform",
       description: "A platform designed to streamline property management processes, enhance collaboration among internal teams, and improve overall operational efficiency. The platform includes features such as task management, document sharing, and communication tools.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
