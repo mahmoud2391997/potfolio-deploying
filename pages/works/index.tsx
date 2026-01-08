@@ -46,6 +46,15 @@ export default function Works() {
 
   const projects = [
     {
+title:"ai & e-commerce perfume store",
+description:"An intelligent system that analyzes your personality, your occasions, and even your skin chemistry to recommend the perfect fragrance for you",
+technologies : ["Next.js", "TypeScript", "Tailwind CSS","Fastapi","supabase","postgresql"],
+link:"https://thabat-luxury-perfumes.vercel.app/",
+image:"/ai.png",
+gradient: "from-green-500 to-blue-500",
+
+},
+    {
       title: "Market OS - Supermarket Management System",
       description: "A comprehensive supermarket management system that streamlines operations, enhances customer experience, and boosts business growth. The system offers features such as inventory management, sales tracking, and customer relationship management (CRM). With an intuitive interface and robust backend, it empowers supermarkets to efficiently manage their services and provide exceptional shopping experiences to their clients.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
