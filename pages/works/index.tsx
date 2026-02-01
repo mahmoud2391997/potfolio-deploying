@@ -63,15 +63,7 @@ image:"/ai.png",
 gradient: "from-green-500 to-blue-500",
 
 },
-    {
-      title: "Market OS - Supermarket Management System",
-      description: "A comprehensive supermarket management system that streamlines operations, enhances customer experience, and boosts business growth. The system offers features such as inventory management, sales tracking, and customer relationship management (CRM). With an intuitive interface and robust backend, it empowers supermarkets to efficiently manage their services and provide exceptional shopping experiences to their clients.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-
-      link: "https://marketos.kesug.com/",
-      image: "/market.png",
-      gradient: "from-green-500 to-blue-500",
-    },
+  
     {
       title: "property management internal incorporation platform",
       description: "A platform designed to streamline property management processes, enhance collaboration among internal teams, and improve overall operational efficiency. The platform includes features such as task management, document sharing, and communication tools.",
@@ -105,13 +97,13 @@ gradient: "from-green-500 to-blue-500",
       image: "/e-learning.png",
       gradient: "from-purple-500 to-pink-500",
     },
-    {
-      title: "SAM'S PS gaming center system",
-      description: "SAM's PS Gaming Center System is a comprehensive web application designed to manage and streamline the operations of a gaming center. It offers features such as customer management, inventory tracking, and revenue reporting. The system is built using Next.js and Node.js, ensuring a seamless user experience for both administrators and customers.",
-      technologies: ["React.js","Vite"],
-      link: "https://z14.great-site.net",
-      image: "/sams.png",
-    },
+    // {
+    //   title: "SAM'S PS gaming center system",
+    //   description: "SAM's PS Gaming Center System is a comprehensive web application designed to manage and streamline the operations of a gaming center. It offers features such as customer management, inventory tracking, and revenue reporting. The system is built using Next.js and Node.js, ensuring a seamless user experience for both administrators and customers.",
+    //   technologies: ["React.js","Vite"],
+    //   link: "https://z14.great-site.net",
+    //   image: "/sams.png",
+    // },
     {
       title: "Masters Clinics Website",
       description: "The Masters Clinics Website is a comprehensive platform designed for a network of clinics. It offers features such as appointment scheduling, patient management, and telemedicine capabilities. Built with Next.js and Node.js, the website ensures a seamless user experience for both patients and healthcare providers.",
