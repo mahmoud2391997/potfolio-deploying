@@ -3,9 +3,13 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { motion, Variants } from "framer-motion"
+import { useState } from "react"
 
-export default function Navbar() {
+export default function Navbar({ isMenuOpen, setIsMenuOpen }: { isMenuOpen?: boolean; setIsMenuOpen?: (open: boolean) => void }) {
   const router = useRouter()
+  const [localMenuOpen, setLocalMenuOpen] = useState(false)
+  const menuOpen = isMenuOpen ?? localMenuOpen
+  const setMenuOpen = setIsMenuOpen ?? setLocalMenuOpen
 
   const getActiveTab = () => {
     const path = router.pathname
@@ -56,7 +60,23 @@ export default function Navbar() {
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}
       />
-      <ul className="absolute flex sm:justify-between sm:w-[70%] w-[90%] justify-around sm:left-[15%] left-0 top-[23px] text-[#7c7c7c]">
+      
+      {/* Mobile menu button */}
+      <button
+        className="sm:hidden absolute right-4 top-[23px] z-50 text-white"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {menuOpen ? (
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          ) : (
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          )}
+        </svg>
+      </button>
+
+      {/* Desktop menu */}
+      <ul className="hidden sm:flex sm:justify-between sm:w-[70%] w-[90%] justify-around sm:left-[15%] left-0 top-[23px] text-[#7c7c7c]">
         <motion.li
           className={selected === "home" ? "text-white" : ""}
           variants={linkVariants}
@@ -159,6 +179,62 @@ export default function Navbar() {
           </Link>
         </motion.li>
       </ul>
+
+      {/* Mobile menu */}
+      <motion.div
+        className="sm:hidden absolute top-[70px] left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-purple-500/20 shadow-2xl"
+        initial={{ opacity: 0, height: 0 }}
+        animate={{ 
+          opacity: menuOpen ? 1 : 0, 
+          height: menuOpen ? "auto" : 0,
+          transition: { duration: 0.3 }
+        }}
+      >
+        <div className="flex flex-col py-4 px-6 space-y-4">
+          <Link 
+            href="/" 
+            className={`text-lg ${selected === "home" ? "text-white" : "text-gray-400"}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link 
+            href="/technologies" 
+            className={`text-lg ${selected === "technologies" ? "text-white" : "text-gray-400"}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Technologies
+          </Link>
+          <Link 
+            href="/skills" 
+            className={`text-lg ${selected === "skills" ? "text-white" : "text-gray-400"}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Skills
+          </Link>
+          <Link 
+            href="/works" 
+            className={`text-lg ${selected === "works" ? "text-white" : "text-gray-400"}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Works
+          </Link>
+          <Link 
+            href="/contact" 
+            className={`text-lg ${selected === "contact" ? "text-white" : "text-gray-400"}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
+          </Link>
+          <Link 
+            href="/certificates" 
+            className={`text-lg ${selected === "certificates" ? "text-white" : "text-gray-400"}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Certificates
+          </Link>
+        </div>
+      </motion.div>
     </motion.div>
   )
 }

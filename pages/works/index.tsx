@@ -46,6 +46,15 @@ export default function Works() {
 
   const projects = [
     {
+title:"Ebay & Vinted scraper site",
+description:"A web application that scrapes product data from eBay and Vinted, allowing users to compare prices and find the best deals.",
+technologies : ["Next.js", "TypeScript", "Tailwind CSS","flask","supabase"],
+link:"https://ebay-scraper-buddy-an6albo39-iti1.vercel.app/",
+image:"/ebay.png",
+gradient: "from-green-500 to-blue-500",
+
+},
+    {
 title:"ai & e-commerce perfume store",
 description:"An intelligent system that analyzes your personality, your occasions, and even your skin chemistry to recommend the perfect fragrance for you",
 technologies : ["Next.js", "TypeScript", "Tailwind CSS","Fastapi","supabase","postgresql"],
@@ -162,9 +171,9 @@ gradient: "from-green-500 to-blue-500",
 
         <main className={`container mx-auto px-4 py-8 pt-24 ${orbitron.className}`}>
           <motion.div className="max-w-6xl mx-auto" variants={containerVariants} initial="hidden" animate="visible">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12 sm:mb-16">
               <motion.h1
-                className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4"
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -172,7 +181,7 @@ gradient: "from-green-500 to-blue-500",
                 My Works
               </motion.h1>
               <motion.p
-                className="text-xl text-gray-300 max-w-2xl mx-auto"
+                className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto"
                 initial={{ y: -30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -190,7 +199,7 @@ gradient: "from-green-500 to-blue-500",
                   whileHover="hover"
                 >
                   <div className="grid lg:grid-cols-2 gap-0">
-                    <div className="relative h-64 lg:h-auto">
+                    <div className="relative h-48 sm:h-64 lg:h-auto">
                       <Image
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
@@ -200,10 +209,10 @@ gradient: "from-green-500 to-blue-500",
                       <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-20`}></div>
                     </div>
 
-                    <div className="p-8 flex flex-col justify-between">
+                    <div className="p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
                       <div>
                         <motion.h2
-                          className="text-3xl font-bold text-white mb-4"
+                          className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4"
                           initial={{ x: -20, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}
                           transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -212,7 +221,7 @@ gradient: "from-green-500 to-blue-500",
                         </motion.h2>
 
                         <motion.p
-                          className="text-gray-300 mb-6 leading-relaxed"
+                          className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base"
                           initial={{ x: -20, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}
                           transition={{ duration: 0.5, delay: index * 0.1 + 0.1 }}
@@ -226,12 +235,12 @@ gradient: "from-green-500 to-blue-500",
                           animate={{ x: 0, opacity: 1 }}
                           transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
                         >
-                          <h3 className="text-white font-semibold mb-3">Technologies Used:</h3>
+                          <h3 className="text-white font-semibold mb-3 text-sm sm:text-base">Technologies Used:</h3>
                           <div className="flex flex-wrap gap-2">
                             {project.technologies.map((tech, techIndex) => (
                               <span
                                 key={techIndex}
-                                className={`px-3 py-1 bg-gradient-to-r ${project.gradient} text-white text-sm rounded-full font-medium`}
+                                className={`px-2 sm:px-3 py-1 bg-gradient-to-r ${project.gradient} text-white text-xs sm:text-sm rounded-full font-medium`}
                               >
                                 {tech}
                               </span>
@@ -249,11 +258,11 @@ gradient: "from-green-500 to-blue-500",
                           href={project.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${project.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-200 group`}
+                          className={`inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r ${project.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-200 group text-sm sm:text-base`}
                         >
                           Visit Website
                           <svg
-                            className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200"
+                            className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"

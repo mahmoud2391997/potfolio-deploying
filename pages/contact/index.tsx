@@ -102,20 +102,20 @@ export default function Contact() {
           <motion.div className="max-w-4xl mx-auto" variants={containerVariants} initial="hidden" animate="visible">
             <div className="text-center mb-12">
               <motion.h1
-                className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4"
                 variants={itemVariants}
               >
                 Get In Touch
               </motion.h1>
-              <motion.p className="text-xl text-gray-300 max-w-2xl mx-auto" variants={itemVariants}>
+              <motion.p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto" variants={itemVariants}>
                 Have a project in mind or just want to chat? I'd love to hear from you!
               </motion.p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
               <motion.div variants={itemVariants}>
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-purple-500/20 p-8">
-                  <h2 className="text-2xl font-semibold text-white mb-6">Contact Information</h2>
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-purple-500/20 p-6 sm:p-8">
+                  <h2 className="text-xl sm:text-2xl font-semibold text-white mb-6">Contact Information</h2>
 
                   <div className="space-y-6">
                     <motion.div
@@ -227,12 +227,12 @@ export default function Contact() {
               <motion.div variants={itemVariants}>
                 <form
                   onSubmit={handleSubmit}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-purple-500/20 p-8"
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-purple-500/20 p-6 sm:p-8"
                 >
-                  <h2 className="text-2xl font-semibold text-white mb-6">Send Message</h2>
+                  <h2 className="text-xl sm:text-2xl font-semibold text-white mb-6">Send Message</h2>
 
                   <div className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                           Name *

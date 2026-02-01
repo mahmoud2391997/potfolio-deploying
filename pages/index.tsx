@@ -20,7 +20,7 @@ export default function Home() {
 
         <main className="pt-20">
           {/* Hero Section */}
-          <section className="relative overflow-hidden py-20 px-4">
+          <section className="relative overflow-hidden py-12 sm:py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -32,30 +32,30 @@ export default function Home() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="mb-8"
+                  className="mb-6 sm:mb-8"
                 >
                   <img
                     src="/portfolio.jpg"
                     alt="Mahmoud Mohamed Elsayed - Full Stack Developer"
-                    className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto border-4 border-gradient-to-r from-blue-400 to-purple-600 shadow-2xl"
+                    className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full mx-auto border-4 border-gradient-to-r from-blue-400 to-purple-600 shadow-2xl"
                   />
                 </motion.div>
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 text-balance">
                   Full Stack
                   <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                     {" "}
                     Developer
                   </span>
                 </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto text-pretty">
+                <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto text-pretty px-4">
                   Creating innovative digital experiences with modern technologies and exceptional design
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col gap-3 sm:gap-4 justify-center px-4">
                   <motion.a
                     href="/works"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all"
+                    className="px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all text-sm sm:text-base"
                   >
                     View My Work
                   </motion.a>
@@ -63,7 +63,7 @@ export default function Home() {
                     href="/contact"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-3 border border-gray-600 text-white rounded-lg font-semibold hover:bg-gray-800 transition-all"
+                    className="px-6 sm:px-8 py-2.5 sm:py-3 border border-gray-600 text-white rounded-lg font-semibold hover:bg-gray-800 transition-all text-sm sm:text-base"
                   >
                     Get In Touch
                   </motion.a>
@@ -72,9 +72,9 @@ export default function Home() {
                     download="Mahmoud_Elsayed_CV.pdf"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all flex items-center gap-2"
+                    className="px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 text-sm sm:text-base"
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                     Download CV
@@ -85,20 +85,20 @@ export default function Home() {
           </section>
 
           {/* Skills Preview */}
-          <section className="py-20 px-4">
+          <section className="py-12 sm:py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="text-center mb-16"
+                className="text-center mb-12 sm:mb-16"
               >
-                <h2 className="text-4xl font-bold text-white mb-4">Technical Expertise</h2>
-                <p className="text-gray-400 text-lg">Technologies I work with</p>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Technical Expertise</h2>
+                <p className="text-gray-400 text-base sm:text-lg">Technologies I work with</p>
               </motion.div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 {["React", "Next.js", "Node.js", "TypeScript", "Python", "PostgreSQL", "AWS", "Docker"].map(
                   (tech, index) => (
                     <motion.div
@@ -107,9 +107,9 @@ export default function Home() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 text-center hover:border-blue-500/50 transition-all"
+                      className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-4 sm:p-6 text-center hover:border-blue-500/50 transition-all"
                     >
-                      <h3 className="text-white font-semibold">{tech}</h3>
+                      <h3 className="text-white font-semibold text-sm sm:text-base">{tech}</h3>
                     </motion.div>
                   ),
                 )}
