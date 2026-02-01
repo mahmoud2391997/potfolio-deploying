@@ -74,6 +74,16 @@ gradient: "from-green-500 to-blue-500",
 
     },
     {
+title: "Restaurant management system",
+      description: "A platform designed to streamline restaurant operations, enhance customer experience, and improve overall efficiency. The platform includes features such as order management, inventory tracking, and customer relationship management (CRM).",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      link: "https://market-os-drab.vercel.app/",
+      image: "/erp.png",
+      gradient: "from-pink-500 to-purple-500",
+
+ 
+    },
+    {
       title: "travel agency management platform",
       description: "A comprehensive travel agency management platform that streamlines operations, enhances customer experience, and boosts business growth. The platform offers features such as booking management, customer relationship management (CRM), itinerary planning, and payment processing. With an intuitive interface and robust backend, it empowers travel agencies to efficiently manage their services and provide exceptional travel experiences to their clients.",
   technologies: ["Vite",
