@@ -46,15 +46,6 @@ export default function Works() {
 
   const projects = [
     {
-title:"Ebay & Vinted scraper site",
-description:"A web application that scrapes product data from eBay and Vinted, allowing users to compare prices and find the best deals.",
-technologies : ["Next.js", "TypeScript", "Tailwind CSS","flask","supabase"],
-link:"https://ebay-scraper-buddy-an6albo39-iti1.vercel.app/",
-image:"/ebay.png",
-gradient: "from-green-500 to-blue-500",
-
-},
-    {
 title:"ai & e-commerce perfume store",
 description:"An intelligent system that analyzes your personality, your occasions, and even your skin chemistry to recommend the perfect fragrance for you",
 technologies : ["Next.js", "TypeScript", "Tailwind CSS","Fastapi","supabase","postgresql"],
