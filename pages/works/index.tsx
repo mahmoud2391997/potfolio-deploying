@@ -65,8 +65,8 @@ export default function Works() {
 title:"Vinted scraper site",
 description:"A web application that scrapes product data from Vinted, allowing users to compare prices and find the best deals.",
 technologies : ["Next.js", "TypeScript", "Tailwind CSS","flask","supabase"],
-link:"https://vinted-scraper-buddy-an6albo39-iti1.vercel.app/",
-image:"/vinted.png",
+link:"https://ebay-vinted-one.vercel.app/",
+image:"/ebay.png",
 gradient: "from-green-500 to-blue-500",
 
 },
