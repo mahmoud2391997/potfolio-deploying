@@ -43,18 +43,43 @@ export default function Works() {
       },
     },
   }
-
+  
   const projects = [
     {
-title:"ai & e-commerce perfume store",
-description:"An intelligent system that analyzes your personality, your occasions, and even your skin chemistry to recommend the perfect fragrance for you",
-technologies : ["Next.js", "TypeScript", "Tailwind CSS","Fastapi","supabase","postgresql"],
-link:"https://thabat-luxury-perfumes.vercel.app/",
-image:"/ai.png",
+      title: "Masters Clinics Website",
+      description: "The Masters Clinics Website is a comprehensive platform designed for a network of clinics. It offers features such as appointment scheduling, patient management, and telemedicine capabilities. Built with Next.js and Node.js, the website ensures a seamless user experience for both patients and healthcare providers.",
+      technologies: ["Next.js", "Node.js", "mySQL", "Tailwind CSS"],
+      link: "https://mastersclinics-website-next.vercel.app/",
+      image: "/masters.png",
+      gradient: "from-green-400 to-blue-500",
+    },
+    {
+      title: "Groom hair and beauty salon : Admin Panel",
+      description: "The Admin Panel for Groom Hair and Beauty Salon is a web application designed to manage and oversee the operations of the salons. It provides a user-friendly interface for administrators to handle appointments, customer data, and service offerings. The panel allows for efficient scheduling, tracking of services rendered, and management of staff assignments. With features like analytics and reporting, the admin can monitor performance metrics and make informed decisions to enhance the salons' and customers operations.",
+      technologies: ["React.js", "Redux", "Node.js", "Firebase"],
+      link: "https://admin-panel-preview.vercel.app/dashboard",
+      image: "/ads.png",
+      gradient: "from-blue-500 to-cyan-500",
+    },
+    {
+title:"Vinted scraper site",
+description:"A web application that scrapes product data from Vinted, allowing users to compare prices and find the best deals.",
+technologies : ["Next.js", "TypeScript", "Tailwind CSS","flask","supabase"],
+link:"https://vinted-scraper-buddy-an6albo39-iti1.vercel.app/",
+image:"/vinted.png",
 gradient: "from-green-500 to-blue-500",
 
 },
+{
+  title:"ai & e-commerce perfume store",
+  description:"An intelligent system that analyzes your personality, your occasions, and even your skin chemistry to recommend the perfect fragrance for you",
+  technologies : ["Next.js", "TypeScript", "Tailwind CSS","Fastapi","supabase","postgresql"],
+  link:"https://thabat-luxury-perfumes.vercel.app/",
+  image:"/ai.png",
+  gradient: "from-green-500 to-blue-500",
   
+},
+
     {
       title: "property management internal incorporation platform",
       description: "A platform designed to streamline property management processes, enhance collaboration among internal teams, and improve overall operational efficiency. The platform includes features such as task management, document sharing, and communication tools.",
@@ -104,22 +129,6 @@ title: "Restaurant management system",
       technologies: ["React.js","Vite"],
       link: "https://mahmoud2391997.github.io/web/",
       image: "/sams.png",
-    },
-    {
-      title: "Masters Clinics Website",
-      description: "The Masters Clinics Website is a comprehensive platform designed for a network of clinics. It offers features such as appointment scheduling, patient management, and telemedicine capabilities. Built with Next.js and Node.js, the website ensures a seamless user experience for both patients and healthcare providers.",
-      technologies: ["Next.js", "Node.js", "mySQL", "Tailwind CSS"],
-      link: "https://mastersclinics-website-next.vercel.app/",
-      image: "/masters.png",
-      gradient: "from-green-400 to-blue-500",
-    },
-    {
-      title: "Groom hair and beauty salon : Admin Panel",
-      description: "The Admin Panel for Groom Hair and Beauty Salon is a web application designed to manage and oversee the operations of the salons. It provides a user-friendly interface for administrators to handle appointments, customer data, and service offerings. The panel allows for efficient scheduling, tracking of services rendered, and management of staff assignments. With features like analytics and reporting, the admin can monitor performance metrics and make informed decisions to enhance the salons' and customers operations.",
-      technologies: ["React.js", "Redux", "Node.js", "Firebase"],
-      link: "https://admin-panel-preview.vercel.app/dashboard",
-      image: "/ads.png",
-      gradient: "from-blue-500 to-cyan-500",
     },
 
     
