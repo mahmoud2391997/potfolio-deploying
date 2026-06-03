@@ -59,7 +59,7 @@ gradient: "from-green-500 to-blue-500",
       title: "property management internal incorporation platform",
       description: "A platform designed to streamline property management processes, enhance collaboration among internal teams, and improve overall operational efficiency. The platform includes features such as task management, document sharing, and communication tools.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      link: "https://altharwa-alaqaria.vercel.app/",
+      link: "https://v0-deploying-next-js-app-iti1.vercel.app/",
       image: "/propertymanagment.png",
       gradient: "from-pink-500 to-purple-500",
 
