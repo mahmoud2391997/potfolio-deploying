@@ -58,8 +58,16 @@ export default function Works() {
       description: "The Masters Clinics Dashboard is a comprehensive admin panel for managing a network of clinics. It offers features such as appointment scheduling, branch management, department organization, doctor profiles, service catalog, offers management, device tracking, blog content, patient reviews, inquiries handling, and landing page creation. Built with React and Vite, the dashboard provides a seamless management experience for clinic administrators.",
       technologies: ["React", "Vite", "Redux Toolkit", "Material-UI", "TypeScript"],
       link: "https://masters-clinics-dashboard.vercel.app/",
-      image: "/masters.png",
+      image: "/mastersclinics-dashboard.png",
       gradient: "from-green-400 to-blue-500"
+  },
+  {
+    title: "CRM Saas Platform",
+    description: "The CRM Saas Platform is a comprehensive customer relationship management system designed for businesses. It offers features such as customer management, lead tracking, and sales pipeline management. Built with React and Node.js, the platform ensures a seamless user experience for both customers and sales representatives.",
+    technologies: ["React", "Node.js", "mySQL", "Tailwind CSS"],
+    link: "https://crmprototype-xcgxc3xy.manus.space/",
+    image: "/crm.png",
+    gradient: "from-green-400 to-blue-500"
   },
     {
       title: "Groom hair and beauty salon : Admin Panel",
@@ -115,8 +123,8 @@ title: "Restaurant management system",
         "React",
         "shadcn-ui",
         "Tailwind CSS"],
-              link: "https://toursync-pro.vercel.app/",
-      image: "/travel-agency.png",
+              link: "https://hurgada-tours-page.vercel.app/",
+      image: "/travel.png",
       gradient: "from-blue-500 to-indigo-500",
     },
     {
