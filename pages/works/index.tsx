@@ -54,6 +54,14 @@ export default function Works() {
       gradient: "from-green-400 to-blue-500",
     },
     {
+      title: "Masters Clinics Dashboard",
+      description: "The Masters Clinics Dashboard is a comprehensive admin panel for managing a network of clinics. It offers features such as appointment scheduling, branch management, department organization, doctor profiles, service catalog, offers management, device tracking, blog content, patient reviews, inquiries handling, and landing page creation. Built with React and Vite, the dashboard provides a seamless management experience for clinic administrators.",
+      technologies: ["React", "Vite", "Redux Toolkit", "Material-UI", "TypeScript"],
+      link: "https://masters-clinics-dashboard.vercel.app/",
+      image: "/masters.png",
+      gradient: "from-green-400 to-blue-500"
+  },
+    {
       title: "Groom hair and beauty salon : Admin Panel",
       description: "The Admin Panel for Groom Hair and Beauty Salon is a web application designed to manage and oversee the operations of the salons. It provides a user-friendly interface for administrators to handle appointments, customer data, and service offerings. The panel allows for efficient scheduling, tracking of services rendered, and management of staff assignments. With features like analytics and reporting, the admin can monitor performance metrics and make informed decisions to enhance the salons' and customers operations.",
       technologies: ["React.js", "Redux", "Node.js", "Firebase"],
