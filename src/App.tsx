@@ -11,6 +11,7 @@ import Contact from "@/pages/Contact";
 import Certificates from "@/pages/Certificates";
 import Services from "@/pages/Services";
 import CVPage from "@/pages/CV";
+import FloatingActions from "@/components/FloatingActions";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ function App() {
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <Router />
+          <FloatingActions />
         </WouterRouter>
         <Toaster />
       </TooltipProvider>

@@ -32,33 +32,23 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
+    const { name, email, subject, message } = formData
+    const mailtoLink = `mailto:mahmoudmelsaid1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`
+    const whatsappLink = `https://wa.me/201093674795?text=${encodeURIComponent(`Hi Mahmoud,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`)}`
 
-      if (response.ok) {
-        toast({
-          title: "Message sent successfully!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
-        })
-        setFormData({ name: "", email: "", subject: "", message: "" })
-      } else {
-        throw new Error("Failed to send message")
-      }
-    } catch {
-      toast({
-        title: "Error sending message",
-        description: "Please try again or contact me directly via email.",
-        variant: "destructive",
-      })
-    } finally {
-      setIsSubmitting(false)
-    }
+    const mailSubject = encodeURIComponent(subject || "Portfolio Inquiry")
+    const mailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)
+
+    setTimeout(() => {
+      window.open(`mailto:mahmoudmelsaid1@gmail.com?subject=${mailSubject}&body=${mailBody}`, "_blank")
+    }, 300)
+
+    toast({
+      title: "Opening your email client...",
+      description: "You can also reach me directly on WhatsApp.",
+    })
+    setFormData({ name: "", email: "", subject: "", message: "" })
+    setIsSubmitting(false)
   }
 
   const containerVariants = {
