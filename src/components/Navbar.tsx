@@ -101,13 +101,14 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }: { isMenuOpen?: boo
       </ul>
 
       <motion.div
-        className="sm:hidden absolute top-[70px] left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-purple-500/20 shadow-2xl"
+        className="sm:hidden absolute top-[70px] left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-purple-500/20 shadow-2xl overflow-hidden"
         initial={{ opacity: 0, height: 0 }}
         animate={{ 
           opacity: menuOpen ? 1 : 0, 
           height: menuOpen ? "auto" : 0,
           transition: { duration: 0.3 }
         }}
+        style={{ pointerEvents: menuOpen ? "auto" : "none" }}
       >
         <div className="flex flex-col py-4 px-6 space-y-4">
           {[
