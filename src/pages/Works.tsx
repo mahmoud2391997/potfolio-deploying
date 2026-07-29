@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import SEOHead from "../components/SEOHead"
 
-type Category = "All" | "Healthcare" | "E-Commerce" | "SaaS & Admin" | "Education" | "Gaming"
+type Category = "All" | "Healthcare" | "E-Commerce" | "SaaS & Admin" | "Education" | "Gaming" | "HR & Management"
 
 type Project = {
   title: string
@@ -18,7 +18,7 @@ type Project = {
   featured?: boolean
 }
 
-const categories: Category[] = ["All", "Healthcare", "E-Commerce", "SaaS & Admin", "Education", "Gaming"]
+const categories: Category[] = ["All", "Healthcare", "E-Commerce", "SaaS & Admin", "Education", "Gaming", "HR & Management"]
 
 const projects: Project[] = [
   {
@@ -166,6 +166,16 @@ const projects: Project[] = [
     image: "/seven.png",
     gradient: "from-pink-500 to-rose-500",
     category: "E-Commerce",
+  },
+  {
+    title: "Team Management System",
+    description: "Comprehensive HR platform with role-based access control, Kanban task management, real-time dashboards, email invitations, and notifications.",
+    technologies: ["Next.js 16", "React 19.2", "TypeScript", "Supabase", "Tailwind CSS", "Recharts"],
+    link: "https://team-management-system-iti1.vercel.app/",
+    image: "/team-management.png",
+    gradient: "from-indigo-500 to-blue-500",
+    category: "HR & Management",
+    featured: true,
   },
 ]
 
