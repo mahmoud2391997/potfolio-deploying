@@ -177,6 +177,16 @@ const projects: Project[] = [
     category: "HR & Management",
     featured: true,
   },
+  {
+    title: "Fresh Greens - WhatsApp Ordering System",
+    description: "Admin dashboard for managing produce orders across retail, shop, and restaurant channels via WhatsApp. Features real-time order tracking, customer management, inventory alerts, and AI bot integration.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "WhatsApp API", "Real-time Updates"],
+    link: "https://whatsapp-ordering-system-kappa.vercel.app/dashboard",
+    image: "/fresh-greens.png",
+    gradient: "from-green-500 to-emerald-600",
+    category: "SaaS & Admin",
+    featured: true,
+  },
 ]
 
 const containerVariants = {
