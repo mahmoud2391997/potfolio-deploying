@@ -1,3 +1,6 @@
+import "@fontsource/noto-sans-arabic/arabic-400.css"
+import "@fontsource/noto-sans-arabic/arabic-600.css"
+import "@fontsource/noto-sans-arabic/arabic-700.css"
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";

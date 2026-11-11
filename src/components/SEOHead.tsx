@@ -1,3 +1,4 @@
+import { useLanguage } from "@/lib/i18n"
 import { useEffect } from "react"
 
 interface SEOHeadProps {
@@ -18,7 +19,10 @@ export default function SEOHead({
   url = "/",
   type = "website",
 }: SEOHeadProps) {
-  const fullTitle = title.includes("Mahmoud Elsayed") ? title : `${title} | Mahmoud Elsayed - Full Stack Developer`
+  const { language, t } = useLanguage()
+  title = t(title)
+  description = t(description)
+  const fullTitle = (title.includes("Mahmoud Elsayed") || title.includes(t("Mahmoud Elsayed"))) ? title : `${title} | ${t("Mahmoud Elsayed")} — ${t("Full Stack & AI Automation")}`
 
   useEffect(() => {
     document.title = fullTitle
@@ -34,6 +38,7 @@ export default function SEOHead({
       el.setAttribute("content", content)
     }
 
+    setMeta("og:locale", language === "ar" ? "ar_EG" : "en_US", true)
     setMeta("description", description)
     setMeta("keywords", keywords)
     setMeta("og:title", fullTitle, true)
@@ -44,7 +49,7 @@ export default function SEOHead({
     setMeta("twitter:title", fullTitle, true)
     setMeta("twitter:description", description, true)
     setMeta("twitter:image", image, true)
-  }, [fullTitle, description, keywords, type, url, image])
+  }, [fullTitle, description, keywords, type, url, image, language])
 
   return null
 }

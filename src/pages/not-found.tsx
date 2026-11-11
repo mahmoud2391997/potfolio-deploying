@@ -1,21 +1,8 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle } from "lucide-react";
-
-export default function NotFound() {
-  return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
-      <Card className="w-full max-w-md mx-4">
-        <CardContent className="pt-6">
-          <div className="flex mb-4 gap-2">
-            <AlertCircle className="h-8 w-8 text-red-500" />
-            <h1 className="text-2xl font-bold text-gray-900">404 Page Not Found</h1>
-          </div>
-
-          <p className="mt-4 text-sm text-gray-600">
-            Did you forget to add the page to the router?
-          </p>
-        </CardContent>
-      </Card>
-    </div>
-  );
-}
+import { useLanguage } from "@/lib/i18n"
+import { Link } from "wouter"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
+import { ArrowLeft } from "lucide-react"
+export default function NotFound(){
+ const { t } = useLanguage();
+return <div className="portfolio-shell"><Navbar/><main className="section-wrap not-found"><p className="eyebrow">{t("404 · PAGE NOT FOUND")}</p><h1>{t("Looks like a wrong turn.")}</h1><p>{t("The page you’re looking for may have moved. Explore my work or head back home.")}</p><Link href="/" className="action-primary"><ArrowLeft size={18}/>{t(" Back to home")}</Link></main><Footer/></div>}
