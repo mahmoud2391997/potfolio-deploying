@@ -94,6 +94,17 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Mohtawa AI Content Studio",
+    description:
+      "Arabic-first AI content studio that turns one idea or product image into platform-ready social posts, visuals, and videos.",
+    technologies: ["AI Content", "Arabic UX", "Social Media"],
+    link: "https://mohtawa-beta.vercel.app/",
+    image: "/mohtawa-project.png",
+    gradient: "from-violet-500 to-purple-600",
+    category: "SaaS & Admin",
+    featured: true,
+  },
+  {
     title: "CRM SaaS Platform",
     description:
       "Customer relationship management system with lead tracking, sales pipelines, and team collaboration tools.",
