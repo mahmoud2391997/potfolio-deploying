@@ -1,3 +1,5 @@
+import { useLanguage } from "@/lib/i18n"
+import PageIntro from "../components/PageIntro"
 import { motion } from "framer-motion"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
@@ -66,56 +68,41 @@ const cardVariants = {
 }
 
 export default function TechnologiesPage() {
+ const { t } = useLanguage();
+
   return (
     <>
       <SEOHead
-        title="Technologies & Tools - AI, Automation & Full Stack Stack"
-        description="Technology stack: OpenAI, LangChain, WhatsApp API, Make/Zapier, HubSpot, Salesforce, React, Node.js, Python, and more."
+        title={t("Technologies & Tools - AI, Automation & Full Stack Stack")}
+        description={t("Technology stack: OpenAI, LangChain, WhatsApp API, Make/Zapier, HubSpot, Salesforce, React, Node.js, Python, and more.")}
         keywords="OpenAI, LangChain, WhatsApp API, Make automation, HubSpot, Salesforce, React, Node.js, Python, full stack technologies"
         url="/technologies"
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="portfolio-shell inner-page">
         <Navbar />
 
-        <main className="container mx-auto px-4 py-8 pt-24">
+        <main className="section-wrap inner-main">
           <motion.div className="max-w-7xl mx-auto" variants={containerVariants} initial="hidden" animate="visible">
-            <div className="text-center mb-16">
-              <motion.h1
-                className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4"
-                initial={{ y: -50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                Technologies & Tools
-              </motion.h1>
-              <motion.p
-                className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto"
-                initial={{ y: -30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                The full stack I use to build AI systems, automation, and web products
-              </motion.p>
-            </div>
+            <PageIntro eyebrow={t("MY TOOLKIT")} title={t("Technologies & tools.")} description={t("The full stack I use to build AI systems, automation, and web products.")}/>
 
             <motion.div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6" variants={containerVariants}>
               {technologies.map((tech, index) => (
                 <motion.section
                   key={index}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-purple-500/20 p-6 shadow-xl"
+                  className="surface-card p-6 shadow-none"
                   variants={cardVariants}
                   whileHover="hover"
                 >
                   <div className="flex items-center mb-5">
                     <motion.div
-                      className={`w-12 h-12 bg-gradient-to-r ${tech.gradient} rounded-xl flex items-center justify-center text-xl mr-3 shrink-0`}
+                      className={`w-12 h-12 accent-surface rounded-xl flex items-center justify-center text-xl me-3 shrink-0`}
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.5 }}
                     >
-                      {tech.icon}
+                      {t(tech.icon)}
                     </motion.div>
-                    <h2 className="text-base font-bold text-white leading-tight">{tech.title}</h2>
+                    <h2 className="text-base font-bold text-white leading-tight">{t(tech.title)}</h2>
                   </div>
                   <ul className="space-y-2">
                     {tech.items.map((item, itemIndex) => (
@@ -126,8 +113,8 @@ export default function TechnologiesPage() {
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.3, delay: index * 0.1 + itemIndex * 0.05 }}
                       >
-                        <span className={`w-1.5 h-1.5 bg-gradient-to-r ${tech.gradient} rounded-full mr-2.5 shrink-0`} />
-                        {item}
+                        <span className={`w-1.5 h-1.5 accent-surface rounded-full me-2.5 shrink-0`} />
+                        {t(item)}
                       </motion.li>
                     ))}
                   </ul>

@@ -1,3 +1,5 @@
+import { useLanguage } from "@/lib/i18n"
+import PageIntro from "../components/PageIntro"
 import { motion } from "framer-motion"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
@@ -90,51 +92,36 @@ const cardVariants = {
 }
 
 export default function Services() {
+ const { t } = useLanguage();
+
   return (
     <>
       <SEOHead
-        title="Services - AI, Automation, WhatsApp & Web Development"
-        description="Full range of services: AI chatbots, WhatsApp business systems, workflow automation, CRM/ERP integration, custom SaaS development, and programming teaching & mentorship."
+        title={t("Services - AI, Automation, WhatsApp & Web Development")}
+        description={t("Full range of services: AI chatbots, WhatsApp business systems, workflow automation, CRM/ERP integration, custom SaaS development, and programming teaching & mentorship.")}
         keywords="AI automation, WhatsApp chatbot, CRM integration, SaaS development, programming teaching, full stack development services"
         url="/services"
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="portfolio-shell inner-page">
         <Navbar />
 
-        <main className="container mx-auto px-4 py-8 pt-24">
+        <main className="section-wrap inner-main">
           <motion.div className="max-w-7xl mx-auto" variants={containerVariants} initial="hidden" animate="visible">
-            <div className="text-center mb-16">
-              <motion.h1
-                className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4"
-                initial={{ y: -50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                What I Offer
-              </motion.h1>
-              <motion.p
-                className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto"
-                initial={{ y: -30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                End-to-end technology services — from AI automation and WhatsApp systems to custom web apps and programming mentorship
-              </motion.p>
-            </div>
+            <PageIntro eyebrow={t("SERVICES & SOLUTIONS")} title={t("What I offer.")} description={t("End-to-end technology services — from AI automation and WhatsApp systems to custom web apps and programming mentorship.")}/>
 
             <motion.div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8" variants={containerVariants}>
               {services.map((service, index) => (
                 <motion.div
                   key={index}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-purple-500/20 overflow-hidden shadow-xl"
+                  className="surface-card overflow-hidden shadow-none"
                   variants={cardVariants}
                   whileHover="hover"
                 >
-                  <div className={`bg-gradient-to-r ${service.gradient} p-6`}>
+                  <div className={`accent-surface p-6`}>
                     <div className="flex items-center gap-4">
-                      <span className="text-4xl">{service.icon}</span>
-                      <h2 className="text-xl font-bold text-white leading-tight">{service.title}</h2>
+                      <span className="text-4xl">{t(service.icon)}</span>
+                      <h2 className="text-xl font-bold text-white leading-tight">{t(service.title)}</h2>
                     </div>
                   </div>
 
@@ -142,10 +129,10 @@ export default function Services() {
                     {service.items.map((item, i) => (
                       <li key={i} className="group">
                         <div className="flex items-start gap-3">
-                          <span className={`mt-1.5 w-2 h-2 rounded-full bg-gradient-to-r ${service.gradient} shrink-0`} />
+                          <span className={`mt-1.5 w-2 h-2 rounded-full accent-surface shrink-0`} />
                           <div>
-                            <span className="text-white font-semibold text-sm block">{item.name}</span>
-                            <span className="text-gray-400 text-xs leading-relaxed">{item.desc}</span>
+                            <span className="text-white font-semibold text-sm block">{t(item.name)}</span>
+                            <span className="text-gray-400 text-xs leading-relaxed">{t(item.desc)}</span>
                           </div>
                         </div>
                       </li>
@@ -157,34 +144,28 @@ export default function Services() {
                       href="/contact"
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.97 }}
-                      className={`block text-center py-2.5 rounded-xl bg-gradient-to-r ${service.gradient} text-white font-semibold text-sm hover:shadow-lg transition-all`}
-                    >
-                      Get Started
-                    </motion.a>
+                      className={`block text-center py-2.5 rounded-xl accent-surface text-white font-semibold text-sm hover:shadow-lg transition-all`}
+                    >{t(" Get Started ")}</motion.a>
                   </div>
                 </motion.div>
               ))}
             </motion.div>
 
             <motion.div
-              className="mt-20 text-center bg-slate-800/50 border border-purple-500/20 rounded-2xl p-10"
+              className="mt-20 text-center surface-card rounded-2xl p-10"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to build something great?</h2>
-              <p className="text-gray-300 mb-8 max-w-xl mx-auto">
-                Whether you need an AI chatbot, a full-stack app, or a programming mentor — let's talk about what I can do for you.
-              </p>
+              <h2 className="text-3xl font-bold text-white mb-4">{t("Ready to build something great?")}</h2>
+              <p className="text-gray-300 mb-8 max-w-xl mx-auto">{t(" Whether you need an AI chatbot, a full-stack app, or a programming mentor — let's talk about what I can do for you. ")}</p>
               <motion.a
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block px-10 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all"
-              >
-                Contact Me
-              </motion.a>
+                className="inline-block px-10 py-3 accent-button text-white font-semibold rounded-xl hover:shadow-lg transition-all"
+              >{t(" Contact Me ")}</motion.a>
             </motion.div>
           </motion.div>
         </main>

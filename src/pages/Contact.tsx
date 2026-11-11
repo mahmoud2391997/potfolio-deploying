@@ -1,3 +1,5 @@
+import { useLanguage } from "@/lib/i18n"
+import PageIntro from "../components/PageIntro"
 import type React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
@@ -10,6 +12,8 @@ import { Textarea } from "../components/ui/textarea"
 import { useToast } from "../hooks/use-toast"
 
 export default function Contact() {
+ const { t } = useLanguage();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
@@ -44,8 +48,8 @@ export default function Contact() {
     }, 300)
 
     toast({
-      title: "Opening your email client...",
-      description: "You can also reach me directly on WhatsApp.",
+      title: t("Opening your email client..."),
+      description: t("You can also reach me directly on WhatsApp."),
     })
     setFormData({ name: "", email: "", subject: "", message: "" })
     setIsSubmitting(false)
@@ -76,33 +80,23 @@ export default function Contact() {
   return (
     <>
       <SEOHead
-        title="Contact - Get In Touch for Web Development Projects"
-        description="Ready to start your next web development project? Contact me for full-stack development services, React applications, and modern web solutions. Let's bring your ideas to life!"
+        title={t("Contact - Get In Touch for Web Development Projects")}
+        description={t("Ready to start your next web development project? Contact me for full-stack development services, React applications, and modern web solutions. Let's bring your ideas to life!")}
         keywords="contact web developer, hire full stack developer, web development services, React developer contact, freelance developer, web development consultation"
         url="/contact"
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="portfolio-shell inner-page">
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
-        <main className="container mx-auto px-4 py-8 pt-24">
+        <main className="section-wrap inner-main">
           <motion.div className="max-w-4xl mx-auto" variants={containerVariants} initial="hidden" animate="visible">
-            <div className="text-center mb-12">
-              <motion.h1
-                className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4"
-                variants={itemVariants}
-              >
-                Get In Touch
-              </motion.h1>
-              <motion.p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto" variants={itemVariants}>
-                Have a project in mind or just want to chat? I'd love to hear from you!
-              </motion.p>
-            </div>
+            <PageIntro eyebrow={t("LET’S CONNECT")} title={t("Get in touch.")} description={t("Have a project in mind or just want to chat? I’d love to hear from you.")}/>
 
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
               <motion.div variants={itemVariants}>
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-purple-500/20 p-6 sm:p-8">
-                  <h2 className="text-xl sm:text-2xl font-semibold text-white mb-6">Contact Information</h2>
+                <div className="surface-card p-6 sm:p-8">
+                  <h2 className="text-xl sm:text-2xl font-semibold text-white mb-6">{t("Contact Information")}</h2>
 
                   <div className="space-y-6">
                     {[
@@ -136,26 +130,26 @@ export default function Contact() {
                     ].map((item, i) => (
                       <motion.div
                         key={i}
-                        className="flex items-center space-x-4"
+                        className="flex items-center gap-4"
                         whileHover={{ x: 10 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <div className={`w-12 h-12 bg-gradient-to-r ${item.gradient} rounded-full flex items-center justify-center`}>
-                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            {item.icon}
+                        <div className={`w-12 h-12 accent-surface rounded-full flex items-center justify-center`}>
+                          <svg className="w-6 h-6 text-[#83ddc0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            {t(item.icon)}
                           </svg>
                         </div>
                         <div>
-                          <h3 className="text-white font-medium">{item.label}</h3>
-                          <p className="text-gray-300">{item.value}</p>
+                          <h3 className="text-white font-medium">{t(item.label)}</h3>
+                          <p className="contact-value">{t(item.value)}</p>
                         </div>
                       </motion.div>
                     ))}
                   </div>
 
-                  <div className="mt-8 pt-8 border-t border-purple-500/20">
-                    <h3 className="text-white font-medium mb-4">Follow Me</h3>
-                    <div className="flex space-x-4">
+                  <div className="mt-8 pt-8 border-t border-white/10">
+                    <h3 className="text-white font-medium mb-4">{t("Follow Me")}</h3>
+                    <div className="flex gap-4">
                       <motion.a
                         href="https://www.linkedin.com/in/mahmoud-elsayed-17293b29b/"
                         target="_blank"
@@ -188,14 +182,14 @@ export default function Contact() {
               <motion.div variants={itemVariants}>
                 <form
                   onSubmit={handleSubmit}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-purple-500/20 p-6 sm:p-8"
+                  className="surface-card p-6 sm:p-8"
                 >
-                  <h2 className="text-xl sm:text-2xl font-semibold text-white mb-6">Send Message</h2>
+                  <h2 className="text-xl sm:text-2xl font-semibold text-white mb-6">{t("Send Message")}</h2>
 
                   <div className="space-y-6">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Name *</label>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">{t("Name *")}</label>
                         <Input
                           id="name"
                           name="name"
@@ -203,12 +197,12 @@ export default function Contact() {
                           required
                           value={formData.name}
                           onChange={handleInputChange}
-                          className="bg-slate-700/50 border-purple-500/20 text-white placeholder-gray-400 focus:border-purple-400"
-                          placeholder="Mahmoud Elsayed"
+                          className="contact-input"
+                          placeholder={t("Mahmoud Elsayed")}
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email *</label>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">{t("Email *")}</label>
                         <Input
                           id="email"
                           name="email"
@@ -216,14 +210,14 @@ export default function Contact() {
                           required
                           value={formData.email}
                           onChange={handleInputChange}
-                          className="bg-slate-700/50 border-purple-500/20 text-white placeholder-gray-400 focus:border-purple-400"
-                          placeholder="your.email@example.com"
+                          className="contact-input"
+                          placeholder={t("your.email@example.com")}
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">Subject *</label>
+                      <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">{t("Subject *")}</label>
                       <Input
                         id="subject"
                         name="subject"
@@ -231,13 +225,13 @@ export default function Contact() {
                         required
                         value={formData.subject}
                         onChange={handleInputChange}
-                        className="bg-slate-700/50 border-purple-500/20 text-white placeholder-gray-400 focus:border-purple-400"
-                        placeholder="What's this about?"
+                        className="contact-input"
+                        placeholder={t("What's this about?")}
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message *</label>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">{t("Message *")}</label>
                       <Textarea
                         id="message"
                         name="message"
@@ -245,8 +239,8 @@ export default function Contact() {
                         rows={6}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="bg-slate-700/50 border-purple-500/20 text-white placeholder-gray-400 focus:border-purple-400 resize-none"
-                        placeholder="Tell me about your project or just say hello!"
+                        className="contact-input resize-none"
+                        placeholder={t("Tell me about your project or just say hello!")}
                       />
                     </div>
 
@@ -254,16 +248,14 @@ export default function Contact() {
                       <Button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 disabled:opacity-50"
+                        className="w-full accent-button hover:bg-emerald-200 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 disabled:opacity-50"
                       >
-                        {isSubmitting ? (
+                        {t(isSubmitting ? (
                           <div className="flex items-center justify-center">
-                            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                            Sending...
-                          </div>
+                            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white me-2"></div>{t(" Sending... ")}</div>
                         ) : (
                           "Send Message"
-                        )}
+                        ))}
                       </Button>
                     </motion.div>
                   </div>
