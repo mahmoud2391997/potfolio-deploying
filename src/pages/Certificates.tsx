@@ -39,6 +39,13 @@ export default function Certificates() {
       alt: "Sprints Full Stack Development BootCamp Certificate",
     },
     {
+      id: "ischool-tutor",
+      image: "/ischool-certificate.webp",
+      header: "Certificate of Completion - Tutor",
+      subheader: "iSchool - 2026 Intake, Raising the Next Generation of Tech Leaders",
+      alt: "iSchool Certificate of Completion for tutor Mahmoud Mohamed",
+    },
+    {
       id: "experience-letter",
       image: "/experience-letter.png",
       header: "Professional Experience Letter",
