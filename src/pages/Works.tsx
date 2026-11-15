@@ -42,7 +42,7 @@ const projects: Project[] = [
     technologies: ["Next.js 16", "React 19", "TypeScript", "AI SDK", "Prisma", "PostgreSQL", "NextAuth", "Tailwind CSS"],
     link: "https://nexus-ai-terminal-iti1.vercel.app/",
     repository: "https://github.com/mahmoud2391997/nexus-ai-terminal",
-    localDemo: "http://127.0.0.1:5181/demo",
+    demoLink: "https://nexus-ai-terminal-iti1.vercel.app/",
     image: "/nexus-demo.png",
     gradient: "from-blue-500 to-indigo-600",
     category: "AI & Web Scraping",
