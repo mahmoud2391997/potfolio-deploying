@@ -350,5 +350,13 @@
   "A point-of-sale workspace for a handcrafted homeware store with a product catalog, cart, cash/card/InstaPay checkout, sales reports, and barcode/SKU tools for individual physical items.": "نظام نقاط بيع لمتجر منتجات منزلية مصنوعة يدويًا يشمل كتالوج المنتجات والسلة والدفع النقدي والبطاقات وInstaPay وتقارير المبيعات وأدوات الباركود وSKU لكل قطعة فعلية.",
   "Try interactive demo": "تجربة الديمو التفاعلي",
   "Interactive demo prepared locally; publication pending.": "الديمو التفاعلي جاهز محليًا، ولم يُنشر بعد.",
-  "Project interface": "واجهة المشروع"
+  "Project interface": "واجهة المشروع",
+  "Oman Feed Factory ERP": "نظام ERP لمصنع أعلاف في عُمان",
+  "An Arabic RTL ERP for an animal-feed factory in Oman, with inventory ledger and balances, full movement tracking, role-based access, and backups.": "نظام ERP عربي بواجهة RTL لمصنع أعلاف في سلطنة عُمان، يشمل دفتر المخزون والأرصدة وتتبع كامل للحركات وصلاحيات الأدوار والنسخ الاحتياطي.",
+  "Riwaq Workforce & Tasks": "رِواق لإدارة الموظفين والمهام",
+  "An Arabic RTL virtual office for departments, teams, and tasks, with invitation-only access and built-in and custom permission roles.": "مكتب افتراضي عربي بواجهة RTL للأقسام والفرق والمهام، بدخول بالدعوة فقط وأدوار صلاحيات مدمجة ومخصصة.",
+  "Um Al-Qura Clinic System": "نظام مجمع أم القرى الطبي",
+  "An Arabic clinic management system covering patients, appointments, clinical records, billing, inventory, devices, purchasing, and reports, with 13 demo roles.": "نظام عربي لإدارة المجمع الطبي يشمل المرضى والمواعيد والسجلات السريرية والفواتير والمخزون والأجهزة والمشتريات والتقارير، مع 13 دورًا تجريبيًا.",
+  "Al-Bassam School Management & Library": "نظام إدارة مدارس البسام والمكتبة",
+  "A bilingual (Arabic/English) school platform for students, teachers, staff, and an advanced library circulation system, with global search and a notification center.": "منصة مدرسية ثنائية اللغة (عربي/إنجليزي) للطلاب والمعلمين والموظفين ونظام متقدم لإعارة المكتبة، مع بحث شامل ومركز إشعارات."
 }

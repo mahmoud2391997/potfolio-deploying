@@ -238,6 +238,46 @@ const projects: Project[] = [
     category: "HR & Management",
     featured: true,
   },
+  {
+    title: "Oman Feed Factory ERP",
+    description: "An Arabic RTL ERP for an animal-feed factory in Oman, with inventory ledger and balances, full movement tracking, role-based access, and backups.",
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "pnpm Monorepo"],
+    link: "https://nexus-ruddy-zeta.vercel.app/",
+    demoLink: "https://nexus-ruddy-zeta.vercel.app/",
+    repository: "https://github.com/mahmoud2391997/factory",
+    gradient: "from-amber-500 to-orange-600",
+    category: "SaaS & Admin",
+  },
+  {
+    title: "Riwaq Workforce & Tasks",
+    description: "An Arabic RTL virtual office for departments, teams, and tasks, with invitation-only access and built-in and custom permission roles.",
+    technologies: ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL"],
+    link: "https://employees-tasks-managment-workforce.vercel.app/",
+    demoLink: "https://employees-tasks-managment-workforce.vercel.app/",
+    repository: "https://github.com/mahmoud2391997/employees-tasks-managment",
+    gradient: "from-teal-400 to-emerald-600",
+    category: "HR & Management",
+  },
+  {
+    title: "Um Al-Qura Clinic System",
+    description: "An Arabic clinic management system covering patients, appointments, clinical records, billing, inventory, devices, purchasing, and reports, with 13 demo roles.",
+    technologies: ["Next.js", "React", "SQLite", "Node.js 22"],
+    link: "https://um-al-qura-clinic-system.vercel.app/?demo=1",
+    demoLink: "https://um-al-qura-clinic-system.vercel.app/?demo=1",
+    repository: "https://github.com/mahmoud2391997/um-al-qura-clinic-system",
+    gradient: "from-cyan-500 to-blue-600",
+    category: "Healthcare",
+  },
+  {
+    title: "Al-Bassam School Management & Library",
+    description: "A bilingual (Arabic/English) school platform for students, teachers, staff, and an advanced library circulation system, with global search and a notification center.",
+    technologies: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Electron"],
+    link: "https://al-basim-school-al-bassam-school.vercel.app/",
+    demoLink: "https://al-basim-school-al-bassam-school.vercel.app/",
+    repository: "https://github.com/mahmoud2391997/al-basim-school",
+    gradient: "from-indigo-500 to-violet-600",
+    category: "Education",
+  },
 ]
 
 const containerVariants = {
@@ -278,7 +318,7 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
           src={project.image}
           alt={t(project.title)}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-        /> : <div className="scraper-preview" aria-label={t("Server scraping pipeline")}><span>{t("SERVER PIPELINE")}</span><div>{t("Listings ")}<span>{t("→")}</span>{t(" Filters ")}<span>{t("→")}</span>{t(" AI")}</div><p>{t("MongoDB · Telegram")}</p></div>}
+        /> : !project.mechanism ? <div className={`flex h-full w-full items-center justify-center bg-gradient-to-br ${project.gradient} p-6 text-center text-2xl font-bold text-white`} dir="auto">{t(project.title)}</div> : <div className="scraper-preview" aria-label={t("Server scraping pipeline")}><span>{t("SERVER PIPELINE")}</span><div>{t("Listings ")}<span>{t("→")}</span>{t(" Filters ")}<span>{t("→")}</span>{t(" AI")}</div><p>{t("MongoDB · Telegram")}</p></div>}
         <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-30 mix-blend-multiply`} />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />
 
